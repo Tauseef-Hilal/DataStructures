@@ -25,7 +25,8 @@ add_library(data_structures ${LIB_SOURCES})
 # Examples
 set(EXAMPLES_DIR examples)
 set(EXAMPLE_SOURCES
-        ${EXAMPLES_DIR}/linked_list/singly_linked_list.c)
+        ${EXAMPLES_DIR}/linked_list/singly_linked_list_1.c
+        ${EXAMPLES_DIR}/linked_list/singly_linked_list_2.c)
 
 # Example executables
 foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
