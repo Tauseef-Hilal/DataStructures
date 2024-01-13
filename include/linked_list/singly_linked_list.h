@@ -1,9 +1,7 @@
 #ifndef SINGLY_LINKED_LIST_H
 #define SINGLY_LINKED_LIST_H
 
-typedef void (*FreeFunction)(void *);
-typedef int (*CompareFunction)(void *a, void *b);
-typedef void (*PrintFunction)(void *data);
+#include "../utils/common.h"
 
 typedef struct SLL_node
 {

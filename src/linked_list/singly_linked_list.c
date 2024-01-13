@@ -148,6 +148,9 @@ int SLL_search(SinglyLinkedList *list, void *target)
 
 void *SLL_get(SinglyLinkedList *list, int pos)
 {
+  if (list->length == 0)
+    return INT(EMPTY_STRUCTURE_ERROR);
+
   if (pos < 0 || pos >= list->length)
     return INT(INVALID_POSITION_ERROR);
 
