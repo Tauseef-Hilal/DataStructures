@@ -28,6 +28,7 @@ SinglyLinkedList *SLL_new_list(
 
 SinglyLinkedListNode *SLL_new_node(void *data);
 int SLL_insert(SinglyLinkedList *list, int pos, void *data);
+int SLL_append(SinglyLinkedList *list, void *data);
 int SLL_search(SinglyLinkedList *list, void *target);
 void *SLL_pop(SinglyLinkedList *list, int pos);
 void *SLL_get(SinglyLinkedList *list, int pos);

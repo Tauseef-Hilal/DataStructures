@@ -67,6 +67,26 @@ int SLL_insert(SinglyLinkedList *list, int pos, void *data)
   return SUCCESS;
 }
 
+int SLL_append(SinglyLinkedList *list, void *data)
+{
+  SinglyLinkedListNode *node = SLL_new_node(data);
+
+  if (!list->head)
+  {
+    list->head = node;
+    list->length++;
+    return SUCCESS;
+  }
+
+  SinglyLinkedListNode *curr = list->head;
+  while (curr->next)
+    curr = curr->next;
+
+  curr->next = node;
+  list->length++;
+  return SUCCESS;
+}
+
 void *SLL_pop(SinglyLinkedList *list, int pos)
 {
   if (list->length == 0)
@@ -183,7 +203,7 @@ void SLL_reverse(SinglyLinkedList *list)
     curr = next;
   }
 
-  list->head =  prev;
+  list->head = prev;
 }
 
 void SLL_print(SinglyLinkedList *list)
@@ -208,10 +228,10 @@ void SLL_free(SinglyLinkedList *list)
   while (curr)
   {
     temp = curr->next;
-    
+
     if (list->free)
       list->free(curr->data);
-    
+
     free(curr);
     curr = temp;
   }

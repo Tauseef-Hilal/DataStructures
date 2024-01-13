@@ -23,9 +23,9 @@ int compare(void *a, void *b)
 int main()
 {
   SinglyLinkedList *list = SLL_new_list(print_f, compare, NULL);
-  SLL_insert(list, 0, SHORT(3));
-  SLL_insert(list, 1, SHORT(2));
-  SLL_insert(list, 2, SHORT(1));
+  SLL_append(list, SHORT(3));
+  SLL_append(list, SHORT(2));
+  SLL_append(list, SHORT(1));
   SLL_print(list);
   SLL_sort(list);
   SLL_print(list);
